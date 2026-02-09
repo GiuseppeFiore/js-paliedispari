@@ -5,10 +5,10 @@
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 // Dichiariamo chi ha vinto.
 
-// SVOLGIMENTO
+/*
+// SVOLGIMENTO 1 SENZA FUNZIONI
 // Chiedere all'utente la parola pari o dispari
 const pariDispari = prompt('Digitare pari o Dispari')
-
 
 // Scegliere un numero da 1 a 5
 const humanNumber = Number(prompt('Digitare un numero da 1 a 5'))
@@ -37,9 +37,46 @@ if (sum %2 === 0){ //Stiamo verificando che il numero è pari
         console.log("hai perso"); //l'utente sceglie dispari ma esce il numero pari ha perso
     } 
 } 
+*/
 
 
+// SVOLGIMENTO 2 CON LE FUNZIONI
+// Scelta utente
+const pariDispari = prompt("Digitare pari o dispari").toLowerCase();
 
+// Numero utente
+const humanNumber = Number(prompt("Digitare un numero da 1 a 5"));
 
+// Numero PC (funzione)
+const pcNumber = generaNumeroPc();
+
+// Somma
+const sum = humanNumber + pcNumber;
+function generaNumeroPc() {
+    return Math.floor(Math.random() * 5) + 1;
+}
+function isPari(numero) {
+    return numero % 2 === 0;
+}
+
+// Controllo pari o dispari (funzione)
+if (isPari(sum)) {
+    console.log("Il numero è pari");
+
+    if (pariDispari === "pari") {
+        console.log("Hai vinto");
+    } else {
+        console.log("Hai perso");
+    }
+
+} else {
+    console.log("Il numero è dispari");
+
+    if (pariDispari === "dispari") {
+        console.log("Hai vinto");
+    } else {
+        console.log("Hai perso");
+    }
+}
 
 
