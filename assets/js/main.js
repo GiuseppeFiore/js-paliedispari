@@ -17,8 +17,8 @@ const parola = prompt("Inserisci una parola").toLowerCase();
 function parolaPalindroma(word) {
     // const parolaInversa = word.split("").reverse().join("");
     let parolaInversa = ""
-    for (let i = parola.length -1; i>=0; i++ ){
-        parolaInversa = parolaInversa + parola[i] 
+    for (let i = word.length -1; i>=0; i-- ){
+        parolaInversa = parolaInversa + word[i]; 
     } 
     return word === parolaInversa;
 }
