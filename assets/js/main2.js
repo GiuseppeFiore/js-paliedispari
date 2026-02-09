@@ -62,7 +62,7 @@ function isPari(numero) {
 // Controllo pari o dispari (funzione)
 if (isPari(sum)) {
     console.log("Il numero è pari");
-
+    
     if (pariDispari === "pari") {
         console.log("Hai vinto");
     } else {
