@@ -5,28 +5,22 @@
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 // Dichiariamo chi ha vinto.
 
-
-
-
-
-
-
-
-// chiedere all'utente la parola pari o dispari
+// SVOLGIMENTO
+// Chiedere all'utente la parola pari o dispari
 const pariDispari = prompt('Digitare pari o Dispari')
 
 
 // Scegliere un numero da 1 a 5
 const humanNumber = Number(prompt('Digitare un numero da 1 a 5'))
 
-// generare un numero random da 1 a 5 
+// Generare un numero random da 1 a 5 
 const pcNumber = Math.floor (Math.random() * 5) + 1;
 
-// sommare i due numeri
+// Sommare i due numeri
 const sum = humanNumber + pcNumber;
 
-// stabilire la somma è pari o dispari
-// dichiarazione vincitore
+// Stabilire la somma è pari o dispari
+// Dichiarazione vincitore
 if (sum %2 === 0){ //Stiamo verificando che il numero è pari
     console.log("Il numero è pari");
     if (pariDispari == "pari"){ //verificando Scelta dell'utente 
