@@ -20,23 +20,32 @@ const pariDispari = prompt('Digitare pari o Dispari')
 const humanNumber = Number(prompt('Digitare un numero da 1 a 5'))
 
 // generare un numero random da 1 a 5 
-
-
-
+const pcNumber = Math.floor (Math.random() * 5) + 1;
 
 // sommare i due numeri
-
-
-
-
-
-
-
+const sum = humanNumber + pcNumber;
 
 // stabilire la somma è pari o dispari
-
-
-
-
-
 // dichiarazione vincitore
+if (sum %2 === 0){ //Stiamo verificando che il numero è pari
+    console.log("Il numero è pari");
+    if (pariDispari == "pari"){ //verificando Scelta dell'utente 
+        console.log ("hai vinto"); //L'utente ha scelto pari e il numero uscito è pari
+    } else {  
+        console.log ("hai perso"); //L'utente ha scelto dispari e il numero uscito è pari
+    }
+    
+} else {  //Stiamo verificando che il numeri è dispari
+    console.log("Il numero è dispari")
+    if (pariDispari == "dispari") { //Verificando la scelta dell'utente
+        console.log ("Hai vinto"); //l'utente ha scelto dispari ed il numero scelto è dispari
+    } else {
+        console.log("hai perso"); //l'utente sceglie dispari ma esce il numero pari ha perso
+    } 
+} 
+
+
+
+
+
+

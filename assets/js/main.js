@@ -15,8 +15,11 @@ const parola = prompt("Inserisci una parola").toLowerCase();
 // il .join serve a restituire la parola convertita senza virgole spazi o altro (su indicazione personale) in questo caso 
 // Resta solo tra virgolette senza spazi ne altro perche deve restituirci la parola al contrario
 function parolaPalindroma(word) {
-    for (let )
-    const parolaInversa = word.split("").reverse().join("");
+    // const parolaInversa = word.split("").reverse().join("");
+    let parolaInversa = ""
+    for (let i = parola.length -1; i>=0; i++ ){
+        parolaInversa = parolaInversa + parola[i] 
+    } 
     return word === parolaInversa;
 }
 
